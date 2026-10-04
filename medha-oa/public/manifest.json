@@ -1,0 +1,13 @@
+{
+  "name": "SANDHIQ Screening Platform",
+  "short_name": "SANDHIQ",
+  "description": "AI-assisted, offline-first multimodal osteoarthritis screening system",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0284c7",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

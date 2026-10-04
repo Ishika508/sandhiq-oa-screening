@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="Normal xray placeholder">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="620" fill="#0b0b0d"/>
+  <rect width="900" height="620" fill="url(#vig)"/>
+  <g opacity="0.95">
+    <ellipse cx="450" cy="540" rx="120" ry="62" fill="#d8d8d4" opacity="0.85"/>
+    <line x1="330" y1="540" x2="330" y2="341.0" stroke="#e2e2de" stroke-width="23" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="330" cy="412.64" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="330" cy="476.32000000000005" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="312" cy="341.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="348" cy="341.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="312" cy="476.32000000000005" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="348" cy="476.32000000000005" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <line x1="410" y1="540" x2="410" y2="307.0" stroke="#e2e2de" stroke-width="23" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="410" cy="390.88" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="410" cy="465.44" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="392" cy="307.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="428" cy="307.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="392" cy="465.44" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="428" cy="465.44" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <line x1="490" y1="540" x2="490" y2="307.0" stroke="#e2e2de" stroke-width="23" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="490" cy="390.88" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="490" cy="465.44" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="472" cy="307.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="508" cy="307.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="472" cy="465.44" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="508" cy="465.44" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <line x1="570" y1="540" x2="570" y2="341.0" stroke="#e2e2de" stroke-width="23" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="570" cy="412.64" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="570" cy="476.32000000000005" r="16" fill="#ecece8" opacity="0.9"/>
+    <circle cx="552" cy="341.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="588" cy="341.0" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="552" cy="476.32000000000005" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <circle cx="588" cy="476.32000000000005" r="4" fill="#f4f4f0" opacity="0.92"/>
+    <line x1="245" y1="560" x2="205" y2="500" stroke="#e2e2de" stroke-width="19" stroke-linecap="round" opacity="0.75"/>
+  </g>
+  <rect x="0" y="0" width="900" height="112" fill="#0b0b0d" opacity="0.82"/>
+  <text x="36" y="46" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">NORMAL &#183; RADIOGRAPH (X-RAY)</text>
+  <text x="36" y="80" fill="#0d9488" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">Placeholder — awaiting clinical image</text>
+  <rect x="0" y="544" width="900" height="76" fill="#0b0b0d" opacity="0.86"/>
+  <text x="36" y="580" fill="#cbd5e1" font-family="Consolas, monospace" font-size="17">Replace public/images/hand/normal-xray.jpg</text>
+  <text x="36" y="604" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="14">Square-ish crop, min 800 px on the short edge. De-identified, no patient identifiers.</text>
+</svg>

@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --surface: #eef4f7;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply text-slate-800 antialiased;
+  background:
+    radial-gradient(circle at 12% 4%, rgba(20, 168, 184, 0.16), transparent 38%),
+    radial-gradient(circle at 92% 12%, rgba(134, 101, 237, 0.10), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(12, 135, 156, 0.08), transparent 48%),
+    var(--surface);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before, body::after { content: ""; position: fixed; z-index: -1; width: 42vw; height: 42vw; border-radius: 999px; filter: blur(70px); opacity: 0.24; pointer-events: none; animation: drift 46s ease-in-out infinite alternate; }
+body::before { top: -18vw; left: -12vw; background: rgba(60, 200, 213, 0.24); }
+body::after { right: -15vw; bottom: -18vw; background: rgba(134, 101, 237, 0.16); animation-delay: -23s; }
+@keyframes drift { from { transform: translate3d(-2%, 1%, 0) scale(1); } to { transform: translate3d(3%, -2%, 0) scale(1.08); } }
+
+/* ---------- Glassmorphism primitives ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.glass-dark {
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+  position: relative;
+  overflow: hidden;
+}
+.glass-dark::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.025; background-image: repeating-radial-gradient(circle at 0 0, rgba(255,255,255,0.9) 0 0.5px, transparent 0.5px 3px); }
+
+.card {
+  @apply glass rounded-2xl p-6;
+  box-shadow: 0 2px 8px rgba(15, 35, 52, 0.06), 0 1px 2px rgba(15, 35, 52, 0.04);
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 180ms ease;
+}
+.card-interactive:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(15, 35, 52, 0.11), 0 2px 5px rgba(15, 35, 52, 0.06); }
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 font-medium text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.98];
+}
+.btn-primary {
+  @apply btn text-white;
+  background: linear-gradient(135deg, #0284c7, #0d9488);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.28);
+}
+.btn-primary:hover:not(:disabled) { box-shadow: 0 6px 18px rgba(2, 132, 199, 0.38); transform: translateY(-1px); }
+.btn-secondary {
+  @apply btn text-slate-700 glass hover:bg-white/80;
+}
+.btn-ghost {
+  @apply btn text-slate-600 hover:bg-slate-900/5;
+}
+.btn-danger {
+  @apply btn text-white bg-rose-600 hover:bg-rose-700;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200/80 bg-white/70 px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-clinical-400 focus:border-clinical-400 transition-shadow;
+}
+.label {
+  @apply block text-sm font-medium text-slate-600 mb-1.5;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold;
+}
+.badge-low { @apply badge bg-emerald-100/80 text-emerald-700; }
+.badge-moderate { @apply badge bg-amber-100/80 text-amber-700; }
+.badge-high { @apply badge bg-rose-100/80 text-rose-700; }
+.badge-neutral { @apply badge bg-slate-100/80 text-slate-600; }
+
+.icon-tile {
+  @apply h-11 w-11 rounded-2xl flex items-center justify-center shrink-0;
+  background: linear-gradient(135deg, rgba(2,132,199,0.12), rgba(13,148,136,0.12));
+  color: #0369a1;
+}
+.icon-tile-patients { background: linear-gradient(135deg, rgba(20,168,184,0.18), rgba(60,200,213,0.08)); color: #0c879c; }
+.icon-tile-screening { background: linear-gradient(135deg, rgba(134,101,237,0.16), rgba(20,168,184,0.10)); color: #5f3bb4; }
+.icon-tile-report { background: linear-gradient(135deg, rgba(22,189,118,0.16), rgba(20,168,184,0.10)); color: #087a4e; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  .print\:hidden { display: none !important; }
+
+  /* A printed or browser-"saved as PDF" report must contain only the report.
+     The app chrome is fixed-positioned, so without this it prints over the
+     document: the sidebar, the mobile header and the floating assistant
+     widget (the chatbot bubble) all land on top of the clinical content. */
+  aside,
+  nav,
+  [data-app-chrome],
+  [data-chat-widget] {
+    display: none !important;
+  }
+
+  html, body {
+    background: #fff !important;
+  }
+
+  /* Neutralise the dark glass surfaces so text is legible on paper. */
+  .glass-dark,
+  .glass {
+    background: #fff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* Stop long tables and panels being sliced across a page break. */
+  table, tr, .card, .rounded-2xl, .rounded-xl {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  details {
+    /* Force the limitations block open so the caveats actually print. */
+    display: block;
+  }
+  details > summary {
+    display: none;
+  }
+  details > *:not(summary) {
+    display: revert;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}

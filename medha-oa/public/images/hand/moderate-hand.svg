@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="Moderate hand placeholder">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#b45309" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="620" fill="#1b2027"/>
+  <rect width="900" height="620" fill="url(#vig)"/>
+  <g opacity="0.95">
+    <ellipse cx="450" cy="360" rx="150" ry="175" fill="#e8c4a4" opacity="0.95"/>
+    <g transform="rotate(-19.8 348 330)"><rect x="327" y="233.0" width="42" height="97.0" rx="21" fill="#eecfae" opacity="0.95"/></g>
+    <g transform="rotate(-6.6 416 330)"><rect x="395" y="211.0" width="42" height="119.0" rx="21" fill="#eecfae" opacity="0.95"/></g>
+    <g transform="rotate(6.6 484 330)"><rect x="463" y="211.0" width="42" height="119.0" rx="21" fill="#eecfae" opacity="0.95"/></g>
+    <g transform="rotate(19.8 552 330)"><rect x="531" y="233.0" width="42" height="97.0" rx="21" fill="#eecfae" opacity="0.95"/></g>
+    <g transform="rotate(-19.8 348 330)"><circle cx="324" cy="249.0" r="15" fill="#d9a880" opacity="0.9"/><circle cx="372" cy="249.0" r="15" fill="#d9a880" opacity="0.9"/></g>
+    <g transform="rotate(-6.6 416 330)"><circle cx="392" cy="227.0" r="15" fill="#d9a880" opacity="0.9"/><circle cx="440" cy="227.0" r="15" fill="#d9a880" opacity="0.9"/></g>
+    <g transform="rotate(6.6 484 330)"><circle cx="460" cy="227.0" r="15" fill="#d9a880" opacity="0.9"/><circle cx="508" cy="227.0" r="15" fill="#d9a880" opacity="0.9"/></g>
+    <g transform="rotate(19.8 552 330)"><circle cx="528" cy="249.0" r="15" fill="#d9a880" opacity="0.9"/><circle cx="576" cy="249.0" r="15" fill="#d9a880" opacity="0.9"/></g>
+    <ellipse cx="450" cy="548" rx="112" ry="62" fill="#e0b593" opacity="0.95"/>
+  </g>
+  <rect x="0" y="0" width="900" height="112" fill="#1b2027" opacity="0.82"/>
+  <text x="36" y="46" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">MODERATE &#183; CLINICAL PHOTOGRAPH</text>
+  <text x="36" y="80" fill="#b45309" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">Placeholder — awaiting clinical image</text>
+  <rect x="0" y="544" width="900" height="76" fill="#1b2027" opacity="0.86"/>
+  <text x="36" y="580" fill="#cbd5e1" font-family="Consolas, monospace" font-size="17">Replace public/images/hand/moderate-hand.jpg</text>
+  <text x="36" y="604" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="14">Square-ish crop, min 800 px on the short edge. De-identified, no patient identifiers.</text>
+</svg>
